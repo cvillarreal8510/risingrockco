@@ -1,14 +1,149 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Rising Rock Co.</title>
-  <style>
-    body { font-family: sans-serif; text-align: center; margin-top: 50px; }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rising Rock Co.</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            font-family: 'Garamond', 'Georgia', serif;
+            background: radial-gradient(circle at top left, #1b110c, #0c0602);
+            color: #f7f3ef;
+            overflow-x: hidden;
+        }
+
+        body {
+            cursor: url('https://cur.cursors-4u.net/nature/nat-1/nat66.cur'), auto;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 3rem 1rem;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(167, 89, 19, 0.25);
+        }
+
+        h1 {
+            font-size: 3.2rem;
+            color: #c1631a;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px #773d04;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: #d8c1b0;
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+
+        section {
+            padding: 3rem 2rem;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #a75913;
+            border-bottom: 2px solid #c1631a;
+            display: inline-block;
+            text-shadow: 0 0 5px #773d04;
+        }
+
+        p, li {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #f0e6df;
+        }
+
+        .schedule ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .schedule li {
+            background: rgba(255, 255, 255, 0.05);
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-left: 4px solid #c1631a;
+            border-radius: 4px;
+        }
+
+        .image-placeholder {
+            background: rgba(255,255,255,0.04);
+            border: 2px dashed #a75913;
+            padding: 2rem;
+            text-align: center;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .image-placeholder span {
+            color: #a88c78;
+            font-style: italic;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.85rem;
+            color: #9d826e;
+            border-top: 1px solid #392417;
+        }
+
+        a {
+            color: #c06219;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-  <h1>Welcome to Rising Rock Co.</h1>
-  <p>Curated Crystals, Painted Rocks, and Flea Market Finds</p>
+    <header>
+        <img src="rising-rock-logo.svg" alt="Rising Rock Co. Logo" style="max-width: 260px; height: auto; margin-bottom: 1rem;" />
+        <p class="tagline">Crystals Elevated by Energy • Painted by Hand • Curated by Soul</p>
+    </header>
+
+    <section class="about">
+        <h2>About Us</h2>
+        <p>Rising Rock Co. brings nature’s raw power to light with handpicked crystals, painted rock art, and mystically inspired mineral specimens. Rooted in energy flow, elegance, and earthy vibrance, each piece is chosen for both visual beauty and energetic resonance. Catch us at local flea markets or live during Whatnot shows!</p>
+    </section>
+
+    <section class="schedule">
+        <h2>Show Schedule</h2>
+        <ul>
+            <li><strong>📍 Kyle Flea Market</strong> — Sundays 10 AM – 4 PM</li>
+            <li><strong>📡 Whatnot Live Show</strong> — Thursdays 7 PM CST (Follow us @risingrockco)</li>
+        </ul>
+    </section>
+
+    <section class="gallery">
+        <h2>Gallery</h2>
+        <div class="image-placeholder">
+            <span>Images coming soon — your glowing gems and hand-painted pieces will shimmer here.</span>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:risingrockco@gmail.com">risingrockco@gmail.com</a></p>
+        <p>Instagram: <a href="https://instagram.com/risingrockco" target="_blank">@risingrockco</a></p>
+    </section>
+
+    <footer>
+        &copy; 2025 Rising Rock Co. • Where crystals rise and stories flow
+    </footer>
 </body>
 </html>
