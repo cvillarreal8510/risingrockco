@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rising Rock Co.</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            font-family: 'Garamond', 'Georgia', serif;
+            background: radial-gradient(circle at top left, #1b110c, #0c0602);
+            color: #f7f3ef;
+            overflow-x: hidden;
+        }
+
+        body {
+            cursor: url('crystal-stones-sunstone-pack.png') 4 4, auto;
+        }
+
+        a:hover {
+            cursor: url('crystal-cursor-hover-64.png') 16 16, pointer;
+        }
+
+        header {
+            background: transparent;
+            padding: 3rem 1rem 1rem;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            font-size: 3.2rem;
+            color: #c1631a;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px #773d04;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: #d8c1b0;
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+
+        .divider-container {
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            margin-top: -20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .divider-container svg {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        #wave1 {
+            animation: wave1Anim 2s ease-in-out infinite alternate;
+            transform-origin: center;
+        }
+
+        #wave2 {
+            animation: wave2Anim 2s ease-in-out infinite alternate;
+            transform-origin: center;
+        }
+
+        #wave3 {
+            animation: wave3Anim 2s ease-in-out infinite alternate;
+            transform-origin: center;
+        }
+
+        @keyframes wave1Anim {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(1px); }
+        }
+
+        @keyframes wave2Anim {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-1px); }
+        }
+
+        @keyframes wave3Anim {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(2px); }
+        }
+
+        section {
+            padding: 3rem 2rem;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #a75913;
+            border-bottom: 2px solid #c1631a;
+            display: inline-block;
+            text-shadow: 0 0 5px #773d04;
+        }
+
+        p, li {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #f0e6df;
+        }
+
+        .schedule ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .schedule li {
+            background: rgba(255, 255, 255, 0.05);
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-left: 4px solid #c1631a;
+            border-radius: 4px;
+        }
+
+        .image-placeholder {
+            background: rgba(255,255,255,0.04);
+            border: 2px dashed #a75913;
+            padding: 2rem;
+            text-align: center;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .image-placeholder span {
+            color: #a88c78;
+            font-style: italic;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.85rem;
+            color: #9d826e;
+            border-top: 1px solid #392417;
+        }
+
+        a {
+            color: #c06219;
+            text-decoration: none;
+        }
+
+        a:hover {
+            cursor: url('crystal-cursor-hover-64.png') 16 16, pointer;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="rising-rock-logo.svg" alt="Rising Rock Co. Logo" style="max-width: 260px; height: auto; margin-bottom: 1rem;" />
+        <p class="tagline">Crystals Elevated by Energy • Painted by Hand • Curated by Soul</p>
+    </header>
+
+    <div class="divider-container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="210mm" height="20mm" viewBox="0 0 210 20">
+            <defs>
+                <radialGradient id="bgBlend" cx="0.2" cy="0.1" r="1.2" gradientUnits="objectBoundingBox">
+    <stop offset="0%" stop-color="#1b110c" />
+    <stop offset="100%" stop-color="#0c0602" />
+</radialGradient>
+            </defs>
+            <g>
+                <path id="wave1" style="fill:#a75913;fill-opacity:1" d="m 210,0 c 0,0 -17.245,6.529 -26.281,6.66 -10.209,0.148 -19.692,-6.354 -29.898,-6.66 -13.995,-0.42 -27.471,6.804 -41.472,6.66 -12.415,-0.127 -24.233,-6.592 -36.649,-6.66 C 62.493,-0.072 49.85,6.732 36.644,6.66 24.229,6.593 0,0 0,0 V 20 H 210 Z" />
+                <path id="wave2" style="fill:#c06219;fill-opacity:1" d="m 0,4 c 0,0 17.245,6.529 26.281,6.66 10.209,0.148 19.692,-6.354 29.898,-6.66 13.995,-0.42 27.471,6.804 41.472,6.66 12.415,-0.127 24.233,-6.592 36.649,-6.66 13.206,-0.072 25.849,6.732 39.055,6.66 C 185.771,10.593 210,4 210,4 V 20 H 0 Z" />
+                <path id="wave3" style="fill:#773d04;fill-opacity:1" d="m 210,6 c 0,0 -17.245,6.529 -26.281,6.66 -10.209,0.148 -19.692,-6.354 -29.898,-6.66 -13.995,-0.42 -27.471,6.804 -41.472,6.66 -12.415,-0.127 -24.233,-6.592 -36.649,-6.66 C 62.493,5.928 49.85,12.732 36.644,12.66 24.229,12.593 0,6 0,6 V 20 H 210 Z" />
+                <path id="wave4" style="fill:url(#bgBlend);fill-opacity:1" d="m 0,8 c 0,0 17.245,6.529 26.281,6.66 10.209,0.148 19.692,-6.354 29.898,-6.66 13.995,-0.42 27.471,6.804 41.472,6.66 12.415,-0.127 24.233,-6.592 36.649,-6.66 13.206,-0.072 25.849,6.732 39.055,6.66 C 185.771,14.593 210,8 210,8 V 20 H 0 Z" />
+            </g>
+        </svg>
+    </div>
+
+    <section class="about">
+        <h2>About Us</h2>
+        <p>Rising Rock Co. brings nature’s raw power to light with handpicked crystals, painted rock art, and mystically inspired mineral specimens. Rooted in energy flow, elegance, and earthy vibrance, each piece is chosen for both visual beauty and energetic resonance. Catch us at local flea markets or live during Whatnot shows!</p>
+    </section>
+
+    <section class="schedule">
+        <h2>Show Schedule</h2>
+        <ul>
+            <li><strong>📡 Whatnot Sunday Funday: Crystals & Painted rocks! Moon, stars, and galaxies, oh my!</strong> — 6/29/2025 4:00 PM CST</li>
+            <li><strong>📡 Whatnot Rising Rock Co Thursday Show! Free giveaways, low starts</strong> — 7/3/2025 6:00 PM CST</li>
+        </ul>
+    </section>
+
+    <section class="gallery">
+        <h2>Gallery</h2>
+        <div class="image-placeholder">
+            <span>Images coming soon — your glowing gems and hand-painted pieces will shimmer here.</span>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:support@risingrock.co">support@risingrock.co</a></p>
+        <p>Whatnot: <a href="https://whatnot.com/invite/risingrockco" target="_blank">@risingrockco (New User - $15 credit) </a></p>
+        <p>Instagram: <a href="https://instagram.com/risingrockco" target="_blank">@risingrockco</a></p>
+    </section>
+
+    <footer>
+        &copy; 2025 Rising Rock Co. • Where crystals rise and stories flow
+    </footer>
+</body>
+</html>
