@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,10 +28,11 @@
         }
 
         header {
-            background: rgba(255, 255, 255, 0.02);
-            padding: 3rem 1rem;
+            background: transparent;
+            padding: 3rem 1rem 1rem;
             text-align: center;
-            box-shadow: 0 0 20px rgba(167, 89, 19, 0.25);
+            position: relative;
+            z-index: 2;
         }
 
         h1 {
@@ -47,6 +47,51 @@
             color: #d8c1b0;
             margin-top: 0.5rem;
             font-style: italic;
+        }
+
+        .divider-container {
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            margin-top: -20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .divider-container svg {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        #wave1 {
+            animation: wave1Anim 2s ease-in-out infinite alternate;
+            transform-origin: center;
+        }
+
+        #wave2 {
+            animation: wave2Anim 2s ease-in-out infinite alternate;
+            transform-origin: center;
+        }
+
+        #wave3 {
+            animation: wave3Anim 2s ease-in-out infinite alternate;
+            transform-origin: center;
+        }
+
+        @keyframes wave1Anim {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(1px); }
+        }
+
+        @keyframes wave2Anim {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-1px); }
+        }
+
+        @keyframes wave3Anim {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(2px); }
         }
 
         section {
@@ -124,6 +169,23 @@
         <img src="rising-rock-logo.svg" alt="Rising Rock Co. Logo" style="max-width: 260px; height: auto; margin-bottom: 1rem;" />
         <p class="tagline">Crystals Elevated by Energy • Painted by Hand • Curated by Soul</p>
     </header>
+
+    <div class="divider-container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="210mm" height="20mm" viewBox="0 0 210 20">
+            <defs>
+                <radialGradient id="bgBlend" cx="0.2" cy="0.1" r="1.2" gradientUnits="objectBoundingBox">
+    <stop offset="0%" stop-color="#1b110c" />
+    <stop offset="100%" stop-color="#0c0602" />
+</radialGradient>
+            </defs>
+            <g>
+                <path id="wave1" style="fill:#a75913;fill-opacity:1" d="m 210,0 c 0,0 -17.245,6.529 -26.281,6.66 -10.209,0.148 -19.692,-6.354 -29.898,-6.66 -13.995,-0.42 -27.471,6.804 -41.472,6.66 -12.415,-0.127 -24.233,-6.592 -36.649,-6.66 C 62.493,-0.072 49.85,6.732 36.644,6.66 24.229,6.593 0,0 0,0 V 20 H 210 Z" />
+                <path id="wave2" style="fill:#c06219;fill-opacity:1" d="m 0,4 c 0,0 17.245,6.529 26.281,6.66 10.209,0.148 19.692,-6.354 29.898,-6.66 13.995,-0.42 27.471,6.804 41.472,6.66 12.415,-0.127 24.233,-6.592 36.649,-6.66 13.206,-0.072 25.849,6.732 39.055,6.66 C 185.771,10.593 210,4 210,4 V 20 H 0 Z" />
+                <path id="wave3" style="fill:#773d04;fill-opacity:1" d="m 210,6 c 0,0 -17.245,6.529 -26.281,6.66 -10.209,0.148 -19.692,-6.354 -29.898,-6.66 -13.995,-0.42 -27.471,6.804 -41.472,6.66 -12.415,-0.127 -24.233,-6.592 -36.649,-6.66 C 62.493,5.928 49.85,12.732 36.644,12.66 24.229,12.593 0,6 0,6 V 20 H 210 Z" />
+                <path id="wave4" style="fill:url(#bgBlend);fill-opacity:1" d="m 0,8 c 0,0 17.245,6.529 26.281,6.66 10.209,0.148 19.692,-6.354 29.898,-6.66 13.995,-0.42 27.471,6.804 41.472,6.66 12.415,-0.127 24.233,-6.592 36.649,-6.66 13.206,-0.072 25.849,6.732 39.055,6.66 C 185.771,14.593 210,8 210,8 V 20 H 0 Z" />
+            </g>
+        </svg>
+    </div>
 
     <section class="about">
         <h2>About Us</h2>
