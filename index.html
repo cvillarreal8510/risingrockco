@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rising Rock Co.</title>
     <style>
         * {
@@ -27,10 +28,11 @@
         }
 
         header {
-            background: rgba(255, 255, 255, 0.02);
-            padding: 3rem 2rem;
+            background: transparent;
+            padding: 3rem 1rem 1rem;
             text-align: center;
-            box-shadow: 0 0 20px rgba(167, 89, 19, 0.25);
+            position: relative;
+            z-index: 2;
         }
 
         h1 {
@@ -164,7 +166,7 @@
 </head>
 <body>
     <header>
-        <img src="rising-rock-logo.svg" alt="Rising Rock Co. Logo" style="max-width: 260px; height: auto; margin-bottom: 1rem;">
+        <img src="rising-rock-logo.svg" alt="Rising Rock Co. Logo" style="max-width: 260px; height: auto; margin-bottom: 1rem;" />
         <p class="tagline">Crystals Elevated by Energy • Painted by Hand • Curated by Soul</p>
     </header>
 
@@ -172,15 +174,15 @@
         <svg xmlns="http://www.w3.org/2000/svg" width="210mm" height="20mm" viewBox="0 0 210 20">
             <defs>
                 <radialGradient id="bgBlend" cx="0.2" cy="0.1" r="1.2" gradientUnits="objectBoundingBox">
-    <stop offset="0%" stop-color="#1b110c"></stop>
-    <stop offset="100%" stop-color="#0c0602"></stop>
+    <stop offset="0%" stop-color="#1b110c" />
+    <stop offset="100%" stop-color="#0c0602" />
 </radialGradient>
             </defs>
             <g>
-                <path id="wave1" style="fill:#a75913;fill-opacity:1" d="m 210,0 c 0,0 -17.245,6.529 -26.281,6.66 -10.209,0.148 -19.692,-6.354 -29.898,-6.66 -13.995,-0.42 -27.471,6.804 -41.472,6.66 -12.415,-0.127 -24.233,-6.592 -36.649,-6.66 C 62.493,-0.072 49.85,6.732 36.644,6.66 24.229,6.593 0,0 0,0 V 20 H 210 Z"></path>
-                <path id="wave2" style="fill:#c06219;fill-opacity:1" d="m 0,4 c 0,0 17.245,6.529 26.281,6.66 10.209,0.148 19.692,-6.354 29.898,-6.66 13.995,-0.42 27.471,6.804 41.472,6.66 12.415,-0.127 24.233,-6.592 36.649,-6.66 13.206,-0.072 25.849,6.732 39.055,6.66 C 185.771,10.593 210,4 210,4 V 20 H 0 Z"></path>
-                <path id="wave3" style="fill:#773d04;fill-opacity:1" d="m 210,6 c 0,0 -17.245,6.529 -26.281,6.66 -10.209,0.148 -19.692,-6.354 -29.898,-6.66 -13.995,-0.42 -27.471,6.804 -41.472,6.66 -12.415,-0.127 -24.233,-6.592 -36.649,-6.66 C 62.493,5.928 49.85,12.732 36.644,12.66 24.229,12.593 0,6 0,6 V 20 H 210 Z"></path>
-                <path id="wave4" style="fill:url(#bgBlend);fill-opacity:1" d="m 0,8 c 0,0 17.245,6.529 26.281,6.66 10.209,0.148 19.692,-6.354 29.898,-6.66 13.995,-0.42 27.471,6.804 41.472,6.66 12.415,-0.127 24.233,-6.592 36.649,-6.66 13.206,-0.072 25.849,6.732 39.055,6.66 C 185.771,14.593 210,8 210,8 V 20 H 0 Z"></path>
+                <path id="wave1" style="fill:#a75913;fill-opacity:1" d="m 210,0 c 0,0 -17.245,6.529 -26.281,6.66 -10.209,0.148 -19.692,-6.354 -29.898,-6.66 -13.995,-0.42 -27.471,6.804 -41.472,6.66 -12.415,-0.127 -24.233,-6.592 -36.649,-6.66 C 62.493,-0.072 49.85,6.732 36.644,6.66 24.229,6.593 0,0 0,0 V 20 H 210 Z" />
+                <path id="wave2" style="fill:#c06219;fill-opacity:1" d="m 0,4 c 0,0 17.245,6.529 26.281,6.66 10.209,0.148 19.692,-6.354 29.898,-6.66 13.995,-0.42 27.471,6.804 41.472,6.66 12.415,-0.127 24.233,-6.592 36.649,-6.66 13.206,-0.072 25.849,6.732 39.055,6.66 C 185.771,10.593 210,4 210,4 V 20 H 0 Z" />
+                <path id="wave3" style="fill:#773d04;fill-opacity:1" d="m 210,6 c 0,0 -17.245,6.529 -26.281,6.66 -10.209,0.148 -19.692,-6.354 -29.898,-6.66 -13.995,-0.42 -27.471,6.804 -41.472,6.66 -12.415,-0.127 -24.233,-6.592 -36.649,-6.66 C 62.493,5.928 49.85,12.732 36.644,12.66 24.229,12.593 0,6 0,6 V 20 H 210 Z" />
+                <path id="wave4" style="fill:url(#bgBlend);fill-opacity:1" d="m 0,8 c 0,0 17.245,6.529 26.281,6.66 10.209,0.148 19.692,-6.354 29.898,-6.66 13.995,-0.42 27.471,6.804 41.472,6.66 12.415,-0.127 24.233,-6.592 36.649,-6.66 13.206,-0.072 25.849,6.732 39.055,6.66 C 185.771,14.593 210,8 210,8 V 20 H 0 Z" />
             </g>
         </svg>
     </div>
@@ -192,11 +194,14 @@
 
     <section class="schedule">
         <h2>Show Schedule</h2>
-        <ul>
-            <li><strong>📡 Whatnot Sunday Funday: Crystals &amp; Painted rocks! Moon, stars, and galaxies, oh my!</strong> — 6/29/2025 4:00 PM CST</li>
-            <li><strong>📡 Whatnot Rising Rock Co Thursday Show! Free giveaways, low starts</strong> — 7/3/2025 6:00 PM CST</li>
-        </ul>
+        <iframe
+            src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FChicago&showPrint=0&mode=AGENDA&showTabs=0&showCalendars=0&showNav=0&title=Rising%20Rock%20Co.%20Schedule&src=M2Q4NDUyNmZkNzg4NzZkY2NmZWFlMmYwM2Y5MTk2OTJlMGJkMTQ0ZWIzMjk1NTFlOWJkNDNlNDM2YzM2OTYyOEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23a79b8e"
+            style="border:solid 1px #777; width: 100%; max-width: 100%; height: 600px;"
+            frameborder="0"
+            scrolling="no">
+        </iframe>
     </section>
+
 
     <section class="gallery">
         <h2>Gallery</h2>
@@ -213,8 +218,7 @@
     </section>
 
     <footer>
-        © 2025 Rising Rock Co. • Where crystals rise and stories flow
+        &copy; 2025 Rising Rock Co. • Where crystals rise and stories flow
     </footer>
-
-
-</body></html>
+</body>
+</html>
