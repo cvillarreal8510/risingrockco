@@ -1,12 +1,13 @@
 <!DOCTYPE html>
+
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>
    Rising Rock Co.
   </title>
-  <style>
+<style>
    * {
             margin: 0;
             padding: 0;
@@ -191,113 +192,170 @@
         margin-bottom: 0.8rem;
         color: #f0e6df;
     }
-  </style>
- </head>
- <body>
-  <header>
-   <img alt="Rising Rock Co. Logo" src="rising-rock-logo.svg" style="max-width: 260px; height: auto; margin-bottom: 1rem;"/>
-   <p class="tagline">
-    Crystals Elevated by Energy &bull; Painted by Hand &bull; Curated by Soul
+  
+.divider-container {
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+    line-height: 0;
+    position: relative;
+    margin-top: -10px;
+    z-index: 1;
+}
+.divider-container svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+@media (max-width: 768px) {
+    .divider-container {
+        height: 20px;
+    }
+}
+</style>
+<style>
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  .about {
+    padding: 1.25rem 1rem;
+    margin-top: 1.5rem;
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .about-intro {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .about p {
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .branding-divider svg {
+    width: 100%;
+    height: 40px;
+    display: block;
+    margin-bottom: -4px;
+  }
+
+  .branding-divider {
+    margin-bottom: 0;
+  }
+
+  .about h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: #a75913;
+    margin-top: 6px;
+    margin-left: 0;
+  }
+}
+</style>
+</head>
+<body>
+<header>
+<img alt="Rising Rock Co. Logo" src="rising-rock-logo.svg" style="max-width: 260px; height: auto; margin-bottom: 1rem;"/>
+<p class="tagline">
+    ✨Curated Crystals &amp; Painted Rocks✨
    </p>
-  </header>
-  <div class="divider-container">
-   <svg height="20mm" viewbox="0 0 210 20" width="210mm" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-     <radialgradient cx="0.2" cy="0.1" gradientunits="objectBoundingBox" id="bgBlend" r="1.2">
-      <stop offset="0%" stop-color="#1b110c">
-      </stop>
-      <stop offset="100%" stop-color="#0c0602">
-      </stop>
-     </radialgradient>
-    </defs>
-    <g>
-     <path d="m 210,0 c 0,0 -17.245,6.529 -26.281,6.66 -10.209,0.148 -19.692,-6.354 -29.898,-6.66 -13.995,-0.42 -27.471,6.804 -41.472,6.66 -12.415,-0.127 -24.233,-6.592 -36.649,-6.66 C 62.493,-0.072 49.85,6.732 36.644,6.66 24.229,6.593 0,0 0,0 V 20 H 210 Z" id="wave1" style="fill:#a75913;fill-opacity:1">
-     </path>
-     <path d="m 0,4 c 0,0 17.245,6.529 26.281,6.66 10.209,0.148 19.692,-6.354 29.898,-6.66 13.995,-0.42 27.471,6.804 41.472,6.66 12.415,-0.127 24.233,-6.592 36.649,-6.66 13.206,-0.072 25.849,6.732 39.055,6.66 C 185.771,10.593 210,4 210,4 V 20 H 0 Z" id="wave2" style="fill:#c06219;fill-opacity:1">
-     </path>
-     <path d="m 210,6 c 0,0 -17.245,6.529 -26.281,6.66 -10.209,0.148 -19.692,-6.354 -29.898,-6.66 -13.995,-0.42 -27.471,6.804 -41.472,6.66 -12.415,-0.127 -24.233,-6.592 -36.649,-6.66 C 62.493,5.928 49.85,12.732 36.644,12.66 24.229,12.593 0,6 0,6 V 20 H 210 Z" id="wave3" style="fill:#773d04;fill-opacity:1">
-     </path>
-     <path d="m 0,8 c 0,0 17.245,6.529 26.281,6.66 10.209,0.148 19.692,-6.354 29.898,-6.66 13.995,-0.42 27.471,6.804 41.472,6.66 12.415,-0.127 24.233,-6.592 36.649,-6.66 13.206,-0.072 25.849,6.732 39.055,6.66 C 185.771,14.593 210,8 210,8 V 20 H 0 Z" id="wave4" style="fill:url(#bgBlend);fill-opacity:1">
-     </path>
-    </g>
-   </svg>
-  </div>
-  <section class="about">
-   <h2>
-    About Us
-   </h2>
-   <p>
-    ✨ Rising Rock Co. &mdash; Curated Crystals &amp; Painted Rocks ✨
-   </p>
-   <p>
-    Welcome! I&rsquo;m a crystal lover and artist sharing the magic of nature&rsquo;s raw energy through vibrant crystals, hand-carved specimens, and one-of-a-kind painted rock art.
-   </p>
-   <p>
-    Every piece is intentionally chosen &mdash; whether natural, dyed, or crafted &mdash; to spark beauty, resonance, and a little bit of cosmic curiosity. From ethereal carvings to original painted creations, everything you see is handpicked for its energy, visual power, and story.
-   </p>
-   <p>
-    My shows are laid-back and honest, with low starts, fast shipping, and surprises like giveaways, grab bags, and rare finds you won&rsquo;t see twice.
-   </p>
-   <ul class="about-features">
-    <li>
-     💎 Handpicked crystals &mdash; natural, dyed &amp; carved
-    </li>
-    <li>
-     🎨 Original painted rock art &mdash; made with soul
-    </li>
-    <li>
-     📦 Packed with care, shipped quick
-    </li>
-    <li>
-     🎁 Something new every show
-    </li>
-   </ul>
-   <p>
-    Catch me live on Whatnot or at local flea markets &mdash; and follow along for good vibes, glowing gems, and art that feels alive.
-   </p>
-  </section>
-  <section class="schedule">
-   <h2>
+</header>
+<div class="divider-container">
+<svg height="100%" preserveaspectratio="none" viewbox="0 0 210 20" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<radialgradient cx="0.2" cy="0.1" gradientunits="objectBoundingBox" id="bgBlend" r="1.2">
+<stop offset="0%" stop-color="#1b110c">
+</stop>
+<stop offset="100%" stop-color="#0c0602">
+</stop>
+</radialgradient>
+</defs>
+<g>
+<path d="m 210,0 c 0,0 -17.245,6.529 -26.281,6.66 -10.209,0.148 -19.692,-6.354 -29.898,-6.66 -13.995,-0.42 -27.471,6.804 -41.472,6.66 -12.415,-0.127 -24.233,-6.592 -36.649,-6.66 C 62.493,-0.072 49.85,6.732 36.644,6.66 24.229,6.593 0,0 0,0 V 20 H 210 Z" id="wave1" style="fill:#a75913;fill-opacity:1">
+</path>
+<path d="m 0,4 c 0,0 17.245,6.529 26.281,6.66 10.209,0.148 19.692,-6.354 29.898,-6.66 13.995,-0.42 27.471,6.804 41.472,6.66 12.415,-0.127 24.233,-6.592 36.649,-6.66 13.206,-0.072 25.849,6.732 39.055,6.66 C 185.771,10.593 210,4 210,4 V 20 H 0 Z" id="wave2" style="fill:#c06219;fill-opacity:1">
+</path>
+<path d="m 210,6 c 0,0 -17.245,6.529 -26.281,6.66 -10.209,0.148 -19.692,-6.354 -29.898,-6.66 -13.995,-0.42 -27.471,6.804 -41.472,6.66 -12.415,-0.127 -24.233,-6.592 -36.649,-6.66 C 62.493,5.928 49.85,12.732 36.644,12.66 24.229,12.593 0,6 0,6 V 20 H 210 Z" id="wave3" style="fill:#773d04;fill-opacity:1">
+</path>
+<path d="m 0,8 c 0,0 17.245,6.529 26.281,6.66 10.209,0.148 19.692,-6.354 29.898,-6.66 13.995,-0.42 27.471,6.804 41.472,6.66 12.415,-0.127 24.233,-6.592 36.649,-6.66 13.206,-0.072 25.849,6.732 39.055,6.66 C 185.771,14.593 210,8 210,8 V 20 H 0 Z" id="wave4" style="fill:url(#bgBlend);fill-opacity:1">
+</path>
+</g>
+</svg>
+</div>
+<section class="about">
+<h2>About Us</h2>
+<p>Welcome! I’m a crystal lover and artist sharing the magic of nature’s raw energy through vibrant crystals, hand-carved specimens, and one-of-a-kind painted rock art.</p>
+<p>Every piece is intentionally chosen — whether natural, dyed, or crafted — to spark beauty, resonance, and a little bit of cosmic curiosity. From ethereal carvings to original painted creations, everything you see is handpicked for its energy, visual power, and story.</p>
+<p>My shows are laid-back and honest, with low starts, fast shipping, and surprises like giveaways, grab bags, and rare finds you won’t see twice.</p>
+</section>
+<section class="about">
+<h2>What We Offer</h2>
+<ul class="about-features">
+<li>💎 Handpicked crystals — natural, dyed &amp; carved</li>
+<li>🎨 Original painted rock art — made with soul</li>
+<li>📦 Packed with care, shipped quick</li>
+<li>🎁 Something new every show</li>
+</ul>
+<p>Catch me live on Whatnot or at local flea markets — and follow along for good vibes, glowing gems, and art that feels alive.</p>
+</section>
+
+<section class="schedule about">
+<h2>
     Show Schedule
    </h2>
-   <iframe frameborder="0" scrolling="no" src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;ctz=America%2FChicago&amp;showPrint=0&amp;mode=AGENDA&amp;showTabs=0&amp;showCalendars=0&amp;showNav=0&amp;title=Rising%20Rock%20Co.%20Schedule&amp;src=M2Q4NDUyNmZkNzg4NzZkY2NmZWFlMmYwM2Y5MTk2OTJlMGJkMTQ0ZWIzMjk1NTFlOWJkNDNlNDM2YzM2OTYyOEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23a79b8e" style="border:solid 1px #777; width: 100%; height: 600px;">
-   </iframe>
-  </section>
-  <section class="gallery">
-   <h2>
+<iframe frameborder="0" scrolling="no" src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;ctz=America%2FChicago&amp;showPrint=0&amp;mode=AGENDA&amp;showTabs=0&amp;showCalendars=0&amp;showNav=0&amp;title=Rising%20Rock%20Co.%20Schedule&amp;src=M2Q4NDUyNmZkNzg4NzZkY2NmZWFlMmYwM2Y5MTk2OTJlMGJkMTQ0ZWIzMjk1NTFlOWJkNDNlNDM2YzM2OTYyOEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23a79b8e" style="border:solid 1px #777; width: 100%; height: 600px;">
+</iframe>
+</section>
+<section class="gallery about">
+<h2>
     Gallery
    </h2>
-   <div class="image-placeholder">
-    <span>
-     Images coming soon &mdash; your glowing gems and hand-painted pieces will shimmer here.
+<div class="image-placeholder">
+<span>
+     Images coming soon — your glowing gems and hand-painted pieces will shimmer here.
     </span>
-   </div>
-  </section>
-  <section class="contact">
-   <h2>
+</div>
+</section>
+<section class="contact about">
+<h2>
     Contact
    </h2>
-   <p>
+<p>
     Email:
     <a href="mailto:support@risingrock.co">
      support@risingrock.co
     </a>
-   </p>
-   <p>
+</p>
+<p>
     Whatnot:
     <a href="https://whatnot.com/invite/risingrockco" target="_blank">
      @risingrockco (New User - $15 credit)
     </a>
-   </p>
-   <p>
+</p>
+<p>
     Instagram:
     <a href="https://instagram.com/risingrockco" target="_blank">
      @risingrockco
     </a>
-   </p>
-  </section>
-  <footer>
-   &copy; 2025 Rising Rock Co. &bull; Where crystals rise and stories flow
+</p>
+</section>
+<footer>
+   © 2025 Rising Rock Co. • Where crystals rise and stories flow
   </footer>
- </body>
+</body>
 </html>
