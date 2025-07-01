@@ -73,15 +73,23 @@
       transition: transform 0.3s;
     }
     .card:hover { transform: translateY(-5px); }
+    html {
+      font-size: 100%;
+    }
+    @media (max-width: 640px) {
+      html {
+        font-size: 90%;
+      }
+    }
   </style>
 </head>
 <body class="text-white smooth-scroll">
 
   <!-- Navigation -->
   <nav style="background-color: #000000;" class="text-[#F5F5DC] py-2 sticky top-0 z-10 shadow-[0_4px_15px_rgba(0,0,0,0.3)]">
-    <div class="container mx-auto px-4 flex justify-between items-center">
-      <img alt="Rising Rock Co. Logo" src="rising-rock-logo2.svg" style="max-width: 150px; height: auto; margin-bottom: 0.5rem;"/>
-      <ul class="flex space-x-6">
+    <div class="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0">
+      <img alt="Rising Rock Co. Logo" src="rising-rock-logo2.svg" class="w-28 sm:w-36 mb-2 sm:mb-0" />
+      <ul class="flex flex-wrap justify-center sm:justify-end space-x-2 sm:space-x-6 text-sm sm:text-base">
         <li><a href="#about" class="hover:text-[#D2691E] transition-all duration-300">About</a></li>
         <li><a href="#offerings" class="hover:text-[#D2691E] transition-all duration-300">Offerings</a></li>
         <li><a href="#gallery" class="hover:text-[#D2691E] transition-all duration-300">Gallery</a></li>
