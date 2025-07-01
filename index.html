@@ -8,6 +8,43 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap">
   <link rel="icon" href="https://via.placeholder.com/32x32?text=RRC" type="image/x-icon">
   <style>
+    #wave1,#wave2,#wave3 {
+      animation: waveAnim1 2s ease-in-out infinite alternate;
+      transform-origin: center;
+      will-change: transform;
+    }
+    #wave2 {
+      animation-name: waveAnim2;
+    }
+    #wave3 {
+      animation-name: waveAnim3;
+    }
+    @keyframes waveAnim1 {
+      0% { transform: translate3d(0,0,0); }
+      100% { transform: translate3d(0,3px,0); }
+    }
+    @keyframes waveAnim2 {
+      0% { transform: translate3d(0,0,0); }
+      100% { transform: translate3d(0,-3px,0); }
+    }
+    @keyframes waveAnim3 {
+      0% { transform: translate3d(0,0,0); }
+      100% { transform: translate3d(0,4px,0); }
+    }
+
+    .divider-container {
+      width: 100%;
+      height: 80px;
+      overflow: hidden;
+      line-height: 0;
+      margin-top: -2px;
+    }
+    .divider-container svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
     body {
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(135deg, #4A2C1D 0%, #5C4033 100%);
@@ -81,14 +118,18 @@
         font-size: 90%;
       }
     }
+    /* === Minified SVG Wave Animation Styles === */
+    #wave1,#wave2,#wave3{animation:waveAnim1 2s ease-in-out infinite alternate;transform-origin:center}#wave2{animation-name:waveAnim2}#wave3{animation-name:waveAnim3}@keyframes waveAnim1{0%{transform:translateY(0)}100%{transform:translateY(1px)}}@keyframes waveAnim2{0%{transform:translateY(0)}100%{transform:translateY(-1px)}}@keyframes waveAnim3{0%{transform:translateY(0)}100%{transform:translateY(2px)}}
+      100% { transform: translateY(2px); }
+    }
   </style>
 </head>
 <body class="text-white smooth-scroll">
 
   <!-- Navigation -->
-  <nav style="background-color: #000000;" class="text-[#F5F5DC] py-2 sticky top-0 z-10 shadow-[0_4px_15px_rgba(0,0,0,0.3)]">
-    <div class="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0">
-      <img alt="Rising Rock Co. Logo" src="rising-rock-logo2.svg" class="w-28 sm:w-36 mb-2 sm:mb-0" />
+  <nav style="background-color: #000000;" class="text-[#F5F5DC] py-1 sticky top-0 z-10 shadow-[0_4px_15px_rgba(0,0,0,0.3)]">
+    <div class="container mx-auto px-2 flex flex-col sm:flex-row justify-between items-center space-y-1 sm:space-y-0">
+      <img alt="Rising Rock Co. Animated Logo" src="ezgif.com-crop.gif" class="h-36 sm:h-52 -mt-12 z-0 relative" />
       <ul class="flex flex-wrap justify-center sm:justify-end space-x-2 sm:space-x-6 text-sm sm:text-base">
         <li><a href="#about" class="hover:text-[#D2691E] transition-all duration-300">About</a></li>
         <li><a href="#offerings" class="hover:text-[#D2691E] transition-all duration-300">Offerings</a></li>
@@ -98,7 +139,18 @@
         <li><a href="#contact" class="hover:text-[#D2691E] transition-all duration-300">Contact</a></li>
       </ul>
     </div>
+    <div class="divider-container" style="margin: 0; padding: 0;">
+  <svg height="100%" preserveAspectRatio="none" viewBox="0 0 210 20" width="100%" xmlns="http://www.w3.org/2000/svg">
+    <g>
+      <path id="wave1" d="m 210,0 c 0,0 -17.245,6.529 -26.281,6.66 -10.209,0.148 -19.692,-6.354 -29.898,-6.66 -13.995,-0.42 -27.471,6.804 -41.472,6.66 -12.415,-0.127 -24.233,-6.592 -36.649,-6.66 C 62.493,-0.072 49.85,6.732 36.644,6.66 24.229,6.593 0,0 0,0 V 20 H 210 Z" fill="#a75913"/>
+      <path id="wave2" d="m 0,4 c 0,0 17.245,6.529 26.281,6.66 10.209,0.148 19.692,-6.354 29.898,-6.66 13.995,-0.42 27.471,6.804 41.472,6.66 12.415,-0.127 24.233,-6.592 36.649,-6.66 13.206,-0.072 25.849,6.732 39.055,6.66 C 185.771,10.593 210,4 210,4 V 20 H 0 Z" fill="#c06219"/>
+      <path id="wave3" d="m 210,6 c 0,0 -17.245,6.529 -26.281,6.66 -10.209,0.148 -19.692,-6.354 -29.898,-6.66 -13.995,-0.42 -27.471,6.804 -41.472,6.66 -12.415,-0.127 -24.233,-6.592 -36.649,-6.66 C 62.493,5.928 49.85,12.732 36.644,12.66 24.229,12.593 0,6 0,6 V 20 H 210 Z" fill="#773d04"/>
+      <path d="m 0,8 c 0,0 17.245,6.529 26.281,6.66 10.209,0.148 19.692,-6.354 29.898,-6.66 13.995,-0.42 27.471,6.804 41.472,6.66 12.415,-0.127 24.233,-6.592 36.649,-6.66 13.206,-0.072 25.849,6.732 39.055,6.66 C 185.771,14.593 210,8 210,8 V 20 H 0 Z" fill=\"url(#bgBlend)"/>
+    </g>
+  </svg>
+</div>
   </nav>
+
   <!-- Hero Section -->
   <section id="hero" class="hero-bg bg-cover bg-center py-20 text-white relative">
     <div class="container mx-auto px-4 text-center relative">
@@ -108,7 +160,9 @@
       <a href="https://whatnot.com/invite/risingrockco" class="btn-earth px-6 py-3 rounded-full font-semibold transition">Join Live Shows on Whatnot</a>
       <p class="mt-4 text-sm">New to Whatnot? Get <strong>$15 credit</strong> when you sign up!</p>
     </div>
+
   </section>
+<svg style="display:none"><defs><radialGradient id="bgBlend" cx="0.2" cy="0.1" r="1.2" gradientUnits="objectBoundingBox"><stop offset="0%" stop-color="#1b110c"/><stop offset="100%" stop-color="#0c0602"/></radialGradient></defs></svg>
 
   <!-- About Us -->
   <section id="about" class="py-16 section-bg">
@@ -231,5 +285,14 @@
     // Placeholder for custom cursor JavaScript - replace with your code
     // Example: document.body.style.cursor = 'url(your-cursor-image.png), auto';
   </script>
+  <svg style="display:none">
+    <defs>
+      <radialGradient id="bgBlend" cx="0.2" cy="0.1" r="1.2" gradientUnits="objectBoundingBox">
+        <stop offset="0%" stop-color="#1b110c"/>
+        <stop offset="100%" stop-color="#0c0602"/>
+      </radialGradient>
+    </defs>
+  </svg>
+
 </body>
 </html>
