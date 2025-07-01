@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rising Rock Co. - Crystals & Painted Rock Art</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap">
+  <link rel="icon" href="https://via.placeholder.com/32x32?text=RRC" type="image/x-icon">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #4A2C1D 0%, #5C4033 100%);
+      color: #FFFFFF;
+      position: relative;
+      overflow-x: hidden;
+      cursor: url('crystal-stones-sunstone-pack.png') 4 4, auto;
+    }
+    a:hover {
+      cursor: url('crystal-cursor-hover-64.png') 16 16, pointer;
+    }
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      color: #F5F5DC;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .smooth-scroll { scroll-behavior: smooth; }
+    .gallery-img {
+      object-fit: cover;
+      width: 100%;
+      height: 200px;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s;
+    }
+    .gallery-img:hover { transform: scale(1.05); }
+    .hero-bg {
+      background: linear-gradient(rgba(74, 44, 29, 0.7), rgba(74, 44, 29, 0.7)), url('https://via.placeholder.com/1920x600?text=Crystal+Sky+Texture');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    .hero-bg::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://via.placeholder.com/50x50?text=Crystal+Pattern') repeat;
+      opacity: 0.05;
+    }
+    .section-bg { background: linear-gradient(135deg, #4A2C1D 0%, #5C4033 100%); }
+    .accent-orange { background: linear-gradient(135deg, #D2691E 0%, #CD853F 100%); }
+    .accent-brown { background: linear-gradient(135deg, #8B4513 0%, #5C4033 100%); }
+    .btn-earth {
+      background-color: #D2691E;
+      color: #FFFFFF;
+      box-shadow: 0 4px 15px rgba(210, 105, 30, 0.4);
+      transition: all 0.3s;
+    }
+    .btn-earth:hover {
+      background-color: #CD853F;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(210, 105, 30, 0.6);
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(5px);
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+    }
+    .card:hover { transform: translateY(-5px); }
+  </style>
+</head>
+<body class="text-white smooth-scroll">
+
+  <!-- Navigation -->
+  <nav style="background-color: #000000;" class="text-[#F5F5DC] py-2 sticky top-0 z-10 shadow-[0_4px_15px_rgba(0,0,0,0.3)]">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <img alt="Rising Rock Co. Logo" src="rising-rock-logo2.svg" style="max-width: 150px; height: auto; margin-bottom: 0.5rem;"/>
+      <ul class="flex space-x-6">
+        <li><a href="#about" class="hover:text-[#D2691E] transition-all duration-300">About</a></li>
+        <li><a href="#offerings" class="hover:text-[#D2691E] transition-all duration-300">Offerings</a></li>
+        <li><a href="#gallery" class="hover:text-[#D2691E] transition-all duration-300">Gallery</a></li>
+        <li><a href="#schedule" class="hover:text-[#D2691E] transition-all duration-300">Schedule</a></li>
+        <li><a href="#request" class="hover:text-[#D2691E] transition-all duration-300">Requests/Feedback</a></li>
+        <li><a href="#contact" class="hover:text-[#D2691E] transition-all duration-300">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Hero Section -->
+  <section id="hero" class="hero-bg bg-cover bg-center py-20 text-white relative">
+    <div class="container mx-auto px-4 text-center relative">
+      <img alt="Rising Rock Co. Logo" src="rising-rock-logo.svg" style="max-width: 360px; height: auto; margin: 0 auto 1rem; display: block;" />
+      <h1 class="text-4xl md:text-4xl font-bold mb-4">Curated Crystals & Painted Rocks</h1>
+      <p class="text-lg md:text-xl mb-6">Discover the magic of nature’s raw energy with vibrant crystals and one-of-a-kind painted rock art.</p>
+      <a href="https://whatnot.com/invite/risingrockco" class="btn-earth px-6 py-3 rounded-full font-semibold transition">Join Live Shows on Whatnot</a>
+      <p class="mt-4 text-sm">New to Whatnot? Get <strong>$15 credit</strong> when you sign up!</p>
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <section id="about" class="py-16 section-bg">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">About Us</h2>
+      <p class="text-lg mb-4">Welcome to Rising Rock Co.! I’m a crystal lover and artist passionate about sharing the magic of nature’s raw energy through vibrant crystals, hand-carved specimens, and one-of-a-kind painted rock art.</p>
+      <p class="text-lg mb-4">Every piece is intentionally chosen — whether natural, dyed, or crafted — to spark beauty, resonance, and a touch of cosmic curiosity. From ethereal carvings to original painted creations, each item is handpicked for its energy, visual power, and unique story.</p>
+      <p class="text-lg">Our live shows are laid-back and honest, featuring low starting bids, fast shipping, and surprises like giveaways, grab bags, and rare finds you won’t see twice. Join us for good vibes and glowing gems!</p>
+    </div>
+  </section>
+
+  <!-- What We Offer -->
+  <section id="offerings" class="py-16 accent-orange">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">What We Offer</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+        <div class="card">
+          <span class="text-4xl">💎</span>
+          <h3 class="text-xl font-semibold mt-4 mb-2">Handpicked Crystals</h3>
+          <p>Natural, dyed, and carved crystals chosen for their vibrant energy and beauty.</p>
+        </div>
+        <div class="card">
+          <span class="text-4xl">🎨</span>
+          <h3 class="text-xl font-semibold mt-4 mb-2">Painted Rock Art</h3>
+          <p>Original, soulful designs crafted to inspire and captivate.</p>
+        </div>
+        <div class="card">
+          <span class="text-4xl">🚞</span>
+          <h3 class="text-xl font-semibold mt-4 mb-2">Fast Shipping</h3>
+          <p>Packed with care and shipped quickly to bring your treasures home.</p>
+        </div>
+        <div class="card">
+          <span class="text-4xl">🏱</span>
+          <h3 class="text-xl font-semibold mt-4 mb-2">Unique Finds</h3>
+          <p>New surprises in every show, from rare gems to exclusive art.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Gallery -->
+  <section id="gallery" class="py-16 accent-brown">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">Gallery</h2>
+      <p class="text-lg text-center mb-8">Our glowing gems and hand-painted pieces are coming soon! Stay tuned for a vibrant showcase.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      </div>
+    </div>
+  </section>
+  <!-- Show Schedule -->
+  <section id="schedule" class="py-16 accent-orange">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">Show Schedule</h2>
+      <p class="text-lg text-center mb-4">Catch our live shows on Whatnot or find us at local flea markets for vibrant gems and exclusive art!</p>
+      <div class="text-center">
+        <p class="mb-4">🗓️ Live on Whatnot: Check our Whatnot page for upcoming shows!</p>
+        <p>📍 Flea Markets: Follow us on Instagram for local event updates.</p>
+        <!-- Placeholder for Google Calendar - replace with your embed code -->
+        <iframe frameborder="0" scrolling="no" src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;ctz=America%2FChicago&amp;showPrint=0&amp;mode=AGENDA&amp;showTabs=0&amp;showCalendars=0&amp;showNav=0&amp;title=Rising%20Rock%20Co.%20Schedule&amp;src=M2Q4NDUyNmZkNzg4NzZkY2NmZWFlMmYwM2Y5MTk2OTJlMGJkMTQ0ZWIzMjk1NTFlOWJkNDNlNDM2YzM2OTYyOEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23a79b8e" style="border:solid 1px #777; width: 100%; height: 600px;">
+</iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Request/feedback -->
+  <section id="request" class="py-16 accent-brown">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">Requests & Feedback</h2>
+  <iframe data-tally-src="https://tally.so/embed/w8YAbY?alignLeft=1&dynamicHeight=1" loading="lazy" width="100%" height="1211" frameborder="0" marginheight="0" marginwidth="0" title="Rising Rock Co. Feedback & Requests"></iframe>
+  <script>
+    var d=document,w="https://tally.so/widgets/embed.js",v=function(){
+      "undefined"!=typeof Tally?Tally.loadEmbeds():
+      d.querySelectorAll("iframe[data-tally-src]:not([src])")
+      .forEach(function(e){e.src=e.dataset.tallySrc});
+    };
+    if("undefined"!=typeof Tally)v();
+    else if(d.querySelector('script[src="'+w+'"]')==null){
+      var s=d.createElement("script");
+      s.src=w;
+      s.onload=v;
+      s.onerror=v;
+      d.body.appendChild(s);
+    }
+  </script>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Us -->
+  <section id="contact" class="py-16 accent-orange">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">Contact Us</h2>
+      <div class="text-center">
+        <p class="mb-2">📧 Email: <a href="mailto:support@risingrock.co" class="text-[#F5F5DC] hover:underline">support@risingrock.co</a></p>
+        <p class="mb-2">📱 Whatnot: <a href="https://www.whatnot.com/user/risingrockco" class="text-[#F5F5DC] hover:underline">@risingrockco</a></p>
+        <p class="mb-2">📸 Instagram: <a href="https://instagram.com/risingrockco" class="text-[#F5F5DC] hover:underline">@risingrockco</a></p>
+        <!-- Placeholder for Formly Form - replace with your embed code -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background: linear-gradient(to right, #8B4513, #5C4033);" class="text-[#F5F5DC] py-6 shadow-[0_-4px_20px_rgba(0,0,0,0.3)]">
+    <div class="container mx-auto px-4 text-center">
+      <p>© 2025 Rising Rock Co. • Where crystals rise and stories flow</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Smooth Scrolling and Custom Cursor -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+    // Placeholder for custom cursor JavaScript - replace with your code
+    // Example: document.body.style.cursor = 'url(your-cursor-image.png), auto';
+  </script>
+</body>
+</html>
