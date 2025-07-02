@@ -10,22 +10,63 @@
   <style>
   @media (max-width: 640px) {
     nav .container {
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
-      padding: 0.5rem 1rem;
+      justify-content: space-between;
+      padding: 0.25rem 1rem;
     }
 
     nav img {
-      height: 3.5rem !important;
-      margin-bottom: 0.25rem;
+      height: 3rem !important;
+      max-width: 48px;
+      margin: 0;
+    }
+
+    .mobile-menu-button {
+      display: block;
+      cursor: pointer;
+      font-size: 1rem;
     }
 
     nav ul {
-      flex-wrap: wrap;
-      justify-content: center;
-      font-size: 0.7rem;
-      padding-bottom: 0.5rem;
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 3.5rem;
+      right: 1rem;
+      background-color: #000;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      z-index: 20;
+      gap: 0.25rem;
     }
+
+    nav ul.show {
+      display: flex;
+    }
+
+    nav ul li a {
+      padding: 0.3rem 0.5rem;
+      font-size: 0.75rem;
+    }
+  }
+
+  nav ul li a {
+    background-color: #c06219;
+    color: #000;
+    padding: 0.4rem 0.75rem;
+    border-radius: 9999px;
+    transition: background-color 0.3s;
+    font-weight: 600;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  nav ul li a:hover {
+    background-color: #a75913;
+    color: #fff;
   }
     .whatnot-banner:hover {
       transform: scale(1.02);
@@ -157,22 +198,31 @@
 <body class="text-white smooth-scroll">
 
   <!-- Navigation -->
+</style>
+
 <nav class="bg-black text-[#F5F5DC] sticky top-0 z-10 shadow-[0_4px_15px_rgba(0,0,0,0.3)]">
-  <div class="container mx-auto px-2 py-1 flex flex-col sm:flex-row items-center justify-center gap-y-1 gap-x-2 overflow-hidden">
+  <div class="container mx-auto px-2 py-1 flex flex-row items-center justify-between">
     <!-- Logo -->
     <img alt="Rising Rock Co. Animated Logo"
          src="ezgif.com-crop.gif"
-         class="h-10 w-auto max-w-[60px] mx-auto sm:mx-0" />
+         class="h-24 w-auto max-w-[50px]" />
+
+    <!-- Mobile Menu Button -->
+    <div class="mobile-menu-button sm:hidden" onclick="document.querySelector('nav ul').classList.toggle('show')">
+      &#9776;
+    </div>
+
     <!-- Navigation Links -->
-    <ul class="flex flex-wrap justify-center items-center text-xs sm:text-sm gap-x-2 gap-y-1 sm:gap-x-4 overflow-x-auto whitespace-nowrap">
-      <li><a href="#about" class="hover:text-[#D2691E] transition-all">About</a></li>
-      <li><a href="#offerings" class="hover:text-[#D2691E] transition-all">Offerings</a></li>
-      <li><a href="#gallery" class="hover:text-[#D2691E] transition-all">Gallery</a></li>
-      <li><a href="#schedule" class="hover:text-[#D2691E] transition-all">Schedule</a></li>
-      <li><a href="#request" class="hover:text-[#D2691E] transition-all">Requests/Feedback</a></li>
-      <li><a href="#contact" class="hover:text-[#D2691E] transition-all">Contact</a></li>
+    <ul class="hidden sm:flex flex-wrap justify-end items-center gap-x-1 sm:gap-x-2 overflow-x-auto">
+      <li><a href="#about">About</a></li>
+      <li><a href="#offerings">Offerings</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#schedule">Schedule</a></li>
+      <li><a href="#request">Requests/Feedback</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
+
   <!-- Divider (unchanged) -->
   <div class="divider-container" style="margin: 0; padding: 0;">
     <svg height="100%" preserveAspectRatio="none" viewBox="0 0 210 20" width="100%" xmlns="http://www.w3.org/2000/svg">
@@ -185,7 +235,14 @@
     </svg>
   </div>
 </nav>
-
+<script>
+  // Toggle mobile menu visibility
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('nav')) {
+      document.querySelector('nav ul')?.classList.remove('show');
+    }
+  });
+</script>
 
 
 <!-- Hero Section -->
