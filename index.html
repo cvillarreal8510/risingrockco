@@ -8,6 +8,27 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap">
   <link rel="icon" href="https://via.placeholder.com/32x32?text=RRC" type="image/x-icon">
   <style>
+    .whatnot-banner {
+      width: 100%;
+      max-width: 760px;
+      border-radius: 1.5rem;
+      display: block;
+      margin: 0 auto;
+      box-shadow: 0 0 20px rgba(255, 204, 0, 0.4); /* yellow glow */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .whatnot-banner:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 40px rgba(255, 204, 0, 0.6); /* brighter glow */
+    }
+
+    #hero h1,
+    #hero p,
+    #hero a {
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+    }
+
     #wave1,#wave2,#wave3 {
       animation: waveAnim1 2s ease-in-out infinite alternate;
       transform-origin: center;
@@ -151,18 +172,24 @@
 </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section id="hero" class="hero-bg bg-cover bg-center py-20 text-white relative">
-    <div class="container mx-auto px-4 text-center relative">
-      <img alt="Rising Rock Co. Logo" src="rising-rock-logo.svg" style="max-width: 360px; height: auto; margin: 0 auto 1rem; display: block;" />
-      <h1 class="text-4xl md:text-4xl font-bold mb-4">Curated Crystals & Painted Rocks</h1>
-      <p class="text-lg md:text-xl mb-6">Discover the magic of nature’s raw energy with vibrant crystals and one-of-a-kind painted rock art.</p>
-      <a href="https://whatnot.com/invite/risingrockco" class="btn-earth px-6 py-3 rounded-full font-semibold transition">Join Live Shows on Whatnot</a>
-      <p class="mt-4 text-sm">New to Whatnot? Get <strong>$15 credit</strong> when you sign up!</p>
-    </div>
+<!-- Hero Section -->
+<section id="hero" class="hero-bg py-20 text-white relative">
+  <div class="container mx-auto px-4 text-center relative" style="max-width: 800px; position: relative;">
 
-  </section>
-<svg style="display:none"><defs><radialGradient id="bgBlend" cx="0.2" cy="0.1" r="1.2" gradientUnits="objectBoundingBox"><stop offset="0%" stop-color="#1b110c"/><stop offset="100%" stop-color="#0c0602"/></radialGradient></defs></svg>
+    <!-- Banner Image: Background Layer -->
+      <img src="live-on-whatnot-banner.png" alt="Live on Whatnot"
+          class="whatnot-banner" />
+    <!-- Whatnot Button -->
+    <a href="https://whatnot.com/invite/risingrockco"
+      class="px-6 py-3 rounded-full font-semibold transition"
+      style="background-color: #FFCC00; color: #000; display: inline-block; margin-top: 2rem;">
+      Join Live Shows on Whatnot
+    </a>
+
+    <p class="mt-4 text-sm">New to Whatnot? Get <strong>$15 credit</strong> when you sign up!</p>
+  </div>
+
+</section>
 
   <!-- About Us -->
   <section id="about" class="py-16 section-bg">
@@ -257,8 +284,16 @@
       <h2 class="text-3xl font-bold text-center mb-8">Contact Us</h2>
       <div class="text-center">
         <p class="mb-2">📧 Email: <a href="mailto:support@risingrock.co" class="text-[#F5F5DC] hover:underline">support@risingrock.co</a></p>
-        <p class="mb-2">📱 Whatnot: <a href="https://www.whatnot.com/user/risingrockco" class="text-[#F5F5DC] hover:underline">@risingrockco</a></p>
-        <p class="mb-2">📸 Instagram: <a href="https://instagram.com/risingrockco" class="text-[#F5F5DC] hover:underline">@risingrockco</a></p>
+        <p class="mb-2" style="display: flex; align-items: center; justify-content: center;">
+          <img src="Symbol_V1.png" alt="Whatnot Icon"
+              style="width: 1em; height: 1em; margin-right: 0.35em;">
+         Whatnot: <a href="https://www.whatnot.com/user/risingrockco" class="text-[#F5F5DC] hover:underline">@risingrockco</a>
+        </p>
+        <p class="mb-2" style="display: flex; align-items: center; justify-content: center;">
+          <img src="Instagram_Glyph_Gradient.png" alt="Instagram Icon"
+              style="width: 1em; height: 1em; margin-right: 0.35em;">
+         Instagram: <a href="https://instagram.com/risingrockco" class="text-[#F5F5DC] hover:underline">@risingrockco</a>
+        </p>
         <!-- Placeholder for Formly Form - replace with your embed code -->
 
       </div>
