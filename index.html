@@ -8,6 +8,16 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap">
   <link rel="icon" href="https://via.placeholder.com/32x32?text=RRC" type="image/x-icon">
   <style>
+    .whatnot-button {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .whatnot-button:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 40px rgba(255, 204, 0, 0.6);
+    }
+
+
   @media (max-width: 640px) {
     nav .container {
       flex-direction: row;
@@ -68,6 +78,15 @@
     background-color: #a75913;
     color: #fff;
   }
+    .whatnot-banner {
+      display: block;
+      margin: 0 auto;
+      border-radius: 1rem;
+      box-shadow: 0 0 20px rgba(255, 204, 0, 0.3); /* soft default glow */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      max-width: 100%;
+      height: auto;
+    }
     .whatnot-banner:hover {
       transform: scale(1.02);
       box-shadow: 0 0 40px rgba(255, 204, 0, 0.6); /* brighter glow */
@@ -183,6 +202,7 @@
     .card:hover { transform: translateY(-5px); }
     html {
       font-size: 100%;
+      scroll-padding-top: 8rem;
     }
     @media (max-width: 640px) {
       html {
@@ -254,10 +274,11 @@
           class="whatnot-banner" />
     <!-- Whatnot Button -->
     <a href="https://whatnot.com/invite/risingrockco"
-      class="px-6 py-3 rounded-full font-semibold transition"
+      class="whatnot-button px-6 py-3 rounded-full font-semibold transition"
       style="background-color: #FFCC00; color: #000; display: inline-block; margin-top: 2rem;">
       Join Live Shows on Whatnot
     </a>
+
 
     <p class="mt-4 text-sm">New to Whatnot? Get <strong>$15 credit</strong> when you sign up!</p>
   </div>
