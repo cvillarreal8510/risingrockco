@@ -26,6 +26,21 @@
       box-shadow: 0 0 40px rgba(255, 204, 0, 0.6);
     }
 
+    .request-container {
+      background-color: #0C0602;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 20px rgba(255, 204, 0, 0.3);
+      text-align: center;
+    }
+
+    .request-container iframe {
+      border-radius: 1rem;
+      width: 100%;
+      height: 1211px;
+      border: none;
+    }
+
     @media (max-width: 640px) {
       nav .container {
         flex-direction: row;
@@ -375,7 +390,7 @@
   <section id="about" class="py-16 section-bg">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-bold text-center mb-8">About Us</h2>
-      <p class="text-lg mb-4">Welcome to Rising Rock Co.! I’m a crystal lover and artist based in the Texas Hill Country passionate about sharing the magic of nature’s raw energy through vibrant crystals, hand-carved specimens, and one-of-a-kind painted rock art.</p>
+      <p class="text-lg mb-4">Welcome to Rising Rock Co.! I’m a crystal lover and artist passionate about sharing the magic of nature’s raw energy through vibrant crystals, hand-carved specimens, and one-of-a-kind painted rock art.</p>
       <p class="text-lg mb-4">Every piece is intentionally chosen — whether natural, dyed, or crafted — to spark beauty, resonance, and a touch of cosmic curiosity. From ethereal carvings to original painted creations, each item is handpicked for its energy, visual power, and unique story.</p>
       <p class="text-lg">Our live shows are laid-back and honest, featuring low starting bids, fast shipping, and surprises like giveaways, grab bags, and rare finds you won’t see twice. Join us for good vibes and glowing gems!</p>
     </div>
@@ -423,7 +438,7 @@
       <p class="text-lg text-center mb-4">Catch our live shows on Whatnot or find us at local flea markets for vibrant gems and exclusive art!</p>
       <div class="text-center" style="background-color: #0C0602; padding: 2rem; border-radius: 1rem; box-shadow: 0 0 20px rgba(255, 204, 0, 0.3);">
         <p class="mb-4" style="color: #F7F3EF;">🗓️ Live on Whatnot: Check our Whatnot page for upcoming shows!</p>
-        <p style="color: #F7F3EF;">📍 Flea Markets: Follow us on Instagram for local event updates for the central Texas region. If there is a market you hope to see us at, feel free to send us a request using our form below!</p>
+        <p style="color: #F7F3EF;">📍 Flea Markets: Follow us on Instagram for local event updates.</p>
         <div class="flex justify-between items-center text-[#FFCC00] mb-4">
           <button id="prev-month" style="background-color: transparent; border: 1px solid #FFCC00; padding: 0.5rem 1rem; border-radius: 0.5rem;">◀</button>
           <h3 id="month-name" class="text-2xl font-bold"></h3>
@@ -530,24 +545,26 @@
   <section id="request" class="py-16 accent-brown">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-bold text-center mb-8">Requests & Feedback</h2>
-      <iframe data-tally-src="https://tally.so/embed/w8YAbY?alignLeft=1&dynamicHeight=1" loading="lazy" width="100%" height="1211" frameborder="0" marginheight="0" marginwidth="0" title="Rising Rock Co. Feedback & Requests"></iframe>
-      <script>
-        var d=document,w="https://tally.so/widgets/embed.js",v=function(){
-          "undefined"!=typeof Tally?Tally.loadEmbeds():
-          d.querySelectorAll("iframe[data-tally-src]:not([src])")
-          .forEach(function(e){e.src=e.dataset.tallySrc});
-        };
-        if("undefined"!=typeof Tally)v();
-        else if(d.querySelector('script[src="'+w+'"]')==null){
-          var s=d.createElement("script");
-          s.src=w;
-          s.onload=v;
-          s.onerror=v;
-          d.body.appendChild(s);
-        }
-      </script>
+      <div class="request-container">
+        <iframe data-tally-src="https://tally.so/embed/w8YAbY?alignLeft=1&dynamicHeight=1" loading="lazy" width="100%" height="1211" frameborder="0" marginheight="0" marginwidth="0" title="Rising Rock Co. Feedback & Requests"></iframe>
+      </div>
     </div>
   </section>
+  <script>
+    var d=document,w="https://tally.so/widgets/embed.js",v=function(){
+      "undefined"!=typeof Tally?Tally.loadEmbeds():
+      d.querySelectorAll("iframe[data-tally-src]:not([src])")
+      .forEach(function(e){e.src=e.dataset.tallySrc});
+    };
+    if("undefined"!=typeof Tally)v();
+    else if(d.querySelector('script[src="'+w+'"]')==null){
+      var s=d.createElement("script");
+      s.src=w;
+      s.onload=v;
+      s.onerror=v;
+      d.body.appendChild(s);
+    }
+  </script>
   <!-- Contact Us -->
   <section id="contact" class="py-16 accent-orange">
     <div class="container mx-auto px-4">
