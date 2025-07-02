@@ -41,6 +41,15 @@
       border: none;
     }
 
+    #prev-month, #next-month {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    #prev-month:hover, #next-month:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 40px rgba(255, 204, 0, 0.6);
+    }
+
     @media (max-width: 640px) {
       nav .container {
         flex-direction: row;
@@ -162,6 +171,15 @@
       .schedule-container {
         overflow-x: auto;
         width: 100%;
+      }
+
+      #prev-month, #next-month {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      #prev-month:hover, #next-month:hover {
+        transform: scale(1.02);
+        box-shadow: 0 0 40px rgba(255, 204, 0, 0.6);
       }
     }
 
