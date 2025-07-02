@@ -17,79 +17,154 @@
       box-shadow: 0 0 40px rgba(255, 204, 0, 0.6);
     }
 
+    @media (max-width: 640px) {
+      nav .container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.25rem 1rem;
+      }
 
-  @media (max-width: 640px) {
-    nav .container {
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0.25rem 1rem;
-    }
+      nav img {
+        height: 3rem !important;
+        max-width: 48px;
+        margin: 0;
+      }
 
-    nav img {
-      height: 3rem !important;
-      max-width: 48px;
-      margin: 0;
-    }
+      .mobile-menu-button {
+        display: block;
+        cursor: pointer;
+        font-size: 1rem;
+      }
 
-    .mobile-menu-button {
-      display: block;
-      cursor: pointer;
-      font-size: 1rem;
-    }
+      nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 3.5rem;
+        right: 1rem;
+        background-color: #000;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 0 10px rgba(0,0,0,0.4);
+        z-index: 20;
+        gap: 0.25rem;
+      }
 
-    nav ul {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 3.5rem;
-      right: 1rem;
-      background-color: #000;
-      padding: 1rem;
-      border-radius: 0.5rem;
-      box-shadow: 0 0 10px rgba(0,0,0,0.4);
-      z-index: 20;
-      gap: 0.25rem;
-    }
+      nav ul.show {
+        display: flex;
+      }
 
-    nav ul.show {
-      display: flex;
+      nav ul li a {
+        padding: 0.3rem 0.5rem;
+        font-size: 0.75rem;
+      }
+
+      #calendar-grid {
+        display: grid;
+        grid-template-columns: repeat(7, 100px);
+        gap: 0.25rem;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+        scrollbar-color: #FFCC00 #1B110C;
+        padding-bottom: 0.5rem;
+      }
+
+      #calendar-grid::-webkit-scrollbar {
+        height: 8px;
+      }
+
+      #calendar-grid::-webkit-scrollbar-track {
+        background: #1B110C;
+      }
+
+      #calendar-grid::-webkit-scrollbar-thumb {
+        background: #FFCC00;
+        border-radius: 4px;
+      }
+
+      #calendar-grid > div {
+        min-width: 100px;
+        min-height: 100px;
+        padding: 0.75rem;
+        font-size: 0.75rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+      }
+
+      #calendar-grid > div strong {
+        font-size: 0.875rem;
+      }
+
+      #calendar-grid > div span {
+        font-size: 0.5rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      #calendar-popup {
+        font-size: 0.75rem;
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      #calendar-popup h3 {
+        font-size: 1rem;
+        white-space: normal;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      #calendar-popup p {
+        font-size: 0.625rem;
+        white-space: normal;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .schedule-container {
+        overflow-x: auto;
+        width: 100%;
+      }
     }
 
     nav ul li a {
-      padding: 0.3rem 0.5rem;
-      font-size: 0.75rem;
+      background-color: #c06219;
+      color: #000;
+      padding: 0.4rem 0.75rem;
+      border-radius: 9999px;
+      transition: background-color 0.3s;
+      font-weight: 600;
+      display: inline-block;
+      text-align: center;
+      white-space: nowrap;
     }
-  }
 
-  nav ul li a {
-    background-color: #c06219;
-    color: #000;
-    padding: 0.4rem 0.75rem;
-    border-radius: 9999px;
-    transition: background-color 0.3s;
-    font-weight: 600;
-    display: inline-block;
-    text-align: center;
-    white-space: nowrap;
-  }
+    nav ul li a:hover {
+      background-color: #a75913;
+      color: #fff;
+    }
 
-  nav ul li a:hover {
-    background-color: #a75913;
-    color: #fff;
-  }
     .whatnot-banner {
       display: block;
       margin: 0 auto;
       border-radius: 1rem;
-      box-shadow: 0 0 20px rgba(255, 204, 0, 0.3); /* soft default glow */
+      box-shadow: 0 0 20px rgba(255, 204, 0, 0.3);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       max-width: 100%;
       height: auto;
     }
+
     .whatnot-banner:hover {
       transform: scale(1.02);
-      box-shadow: 0 0 40px rgba(255, 204, 0, 0.6); /* brighter glow */
+      box-shadow: 0 0 40px rgba(255, 204, 0, 0.6);
     }
 
     #hero h1,
@@ -103,20 +178,25 @@
       transform-origin: center;
       will-change: transform;
     }
+
     #wave2 {
       animation-name: waveAnim2;
     }
+
     #wave3 {
       animation-name: waveAnim3;
     }
+
     @keyframes waveAnim1 {
       0% { transform: translate3d(0,0,0); }
       100% { transform: translate3d(0,3px,0); }
     }
+
     @keyframes waveAnim2 {
       0% { transform: translate3d(0,0,0); }
       100% { transform: translate3d(0,-3px,0); }
     }
+
     @keyframes waveAnim3 {
       0% { transform: translate3d(0,0,0); }
       100% { transform: translate3d(0,4px,0); }
@@ -129,6 +209,7 @@
       line-height: 0;
       margin-top: -2px;
     }
+
     .divider-container svg {
       display: block;
       width: 100%;
@@ -143,15 +224,19 @@
       overflow-x: hidden;
       cursor: url('crystal-stones-sunstone-pack.png') 4 4, auto;
     }
+
     a:hover {
       cursor: url('crystal-cursor-hover-64.png') 16 16, pointer;
     }
+
     h1, h2, h3 {
       font-family: 'Playfair Display', serif;
       color: #F5F5DC;
       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     }
+
     .smooth-scroll { scroll-behavior: smooth; }
+
     .gallery-img {
       object-fit: cover;
       width: 100%;
@@ -160,13 +245,16 @@
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
       transition: transform 0.3s;
     }
+
     .gallery-img:hover { transform: scale(1.05); }
+
     .hero-bg {
       background: linear-gradient(rgba(74, 44, 29, 0.7), rgba(74, 44, 29, 0.7)), url('https://via.placeholder.com/1920x600?text=Crystal+Sky+Texture');
       background-size: cover;
       background-position: center;
       position: relative;
     }
+
     .hero-bg::before {
       content: "";
       position: absolute;
@@ -177,20 +265,26 @@
       background: url('https://via.placeholder.com/50x50?text=Crystal+Pattern') repeat;
       opacity: 0.05;
     }
+
     .section-bg { background: linear-gradient(135deg, #4A2C1D 0%, #5C4033 100%); }
+
     .accent-orange { background: linear-gradient(135deg, #D2691E 0%, #CD853F 100%); }
+
     .accent-brown { background: linear-gradient(135deg, #8B4513 0%, #5C4033 100%); }
+
     .btn-earth {
       background-color: #D2691E;
       color: #FFFFFF;
       box-shadow: 0 4px 15px rgba(210, 105, 30, 0.4);
       transition: all 0.3s;
     }
+
     .btn-earth:hover {
       background-color: #CD853F;
       transform: translateY(-2px);
       box-shadow: 0 6px 20px rgba(210, 105, 30, 0.6);
     }
+
     .card {
       background: rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(5px);
@@ -199,92 +293,69 @@
       box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
       transition: transform 0.3s;
     }
+
     .card:hover { transform: translateY(-5px); }
+
     html {
       font-size: 100%;
       scroll-padding-top: 8rem;
     }
+
     @media (max-width: 640px) {
       html {
         font-size: 90%;
       }
     }
+
     /* === Minified SVG Wave Animation Styles === */
     #wave1,#wave2,#wave3{animation:waveAnim1 2s ease-in-out infinite alternate;transform-origin:center}#wave2{animation-name:waveAnim2}#wave3{animation-name:waveAnim3}@keyframes waveAnim1{0%{transform:translateY(0)}100%{transform:translateY(1px)}}@keyframes waveAnim2{0%{transform:translateY(0)}100%{transform:translateY(-1px)}}@keyframes waveAnim3{0%{transform:translateY(0)}100%{transform:translateY(2px)}}
-      100% { transform: translateY(2px); }
-    }
-  </style>
+    </style>
 </head>
 <body class="text-white smooth-scroll">
-
   <!-- Navigation -->
-</style>
-
-<nav class="bg-black text-[#F5F5DC] sticky top-0 z-10 shadow-[0_4px_15px_rgba(0,0,0,0.3)]">
-  <div class="container mx-auto px-2 py-1 flex flex-row items-center justify-between">
-    <!-- Logo -->
-    <img alt="Rising Rock Co. Animated Logo"
-         src="ezgif.com-crop.gif"
-         class="h-24 w-auto max-w-[50px]" />
-
-    <!-- Mobile Menu Button -->
-    <div class="mobile-menu-button sm:hidden" onclick="document.querySelector('nav ul').classList.toggle('show')">
-      &#9776;
+  <nav class="bg-black text-[#F5F5DC] sticky top-0 z-10 shadow-[0_4px_15px_rgba(0,0,0,0.3)]">
+    <div class="container mx-auto px-2 py-1 flex flex-row items-center justify-between">
+      <img alt="Rising Rock Co. Animated Logo" src="ezgif.com-crop.gif" class="h-24 w-auto max-w-[50px]" />
+      <div class="mobile-menu-button sm:hidden" onclick="document.querySelector('nav ul').classList.toggle('show')">
+        ☰
+      </div>
+      <ul class="hidden sm:flex flex-wrap justify-end items-center gap-x-1 sm:gap-x-2 overflow-x-auto">
+        <li><a href="#about">About</a></li>
+        <li><a href="#offerings">Offerings</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#schedule">Schedule</a></li>
+        <li><a href="#request">Requests/Feedback</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </div>
-
-    <!-- Navigation Links -->
-    <ul class="hidden sm:flex flex-wrap justify-end items-center gap-x-1 sm:gap-x-2 overflow-x-auto">
-      <li><a href="#about">About</a></li>
-      <li><a href="#offerings">Offerings</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#schedule">Schedule</a></li>
-      <li><a href="#request">Requests/Feedback</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
-
-  <!-- Divider (unchanged) -->
-  <div class="divider-container" style="margin: 0; padding: 0;">
-    <svg height="100%" preserveAspectRatio="none" viewBox="0 0 210 20" width="100%" xmlns="http://www.w3.org/2000/svg">
-      <g>
-        <path id="wave1" d="m 210,0 c 0,0 -17.245,6.529 -26.281,6.66 -10.209,0.148 -19.692,-6.354 -29.898,-6.66 -13.995,-0.42 -27.471,6.804 -41.472,6.66 -12.415,-0.127 -24.233,-6.592 -36.649,-6.66 C 62.493,-0.072 49.85,6.732 36.644,6.66 24.229,6.593 0,0 0,0 V 20 H 210 Z" fill="#a75913"/>
-        <path id="wave2" d="m 0,4 c 0,0 17.245,6.529 26.281,6.66 10.209,0.148 19.692,-6.354 29.898,-6.66 13.995,-0.42 27.471,6.804 41.472,6.66 12.415,-0.127 24.233,-6.592 36.649,-6.66 13.206,-0.072 25.849,6.732 39.055,6.66 C 185.771,10.593 210,4 210,4 V 20 H 0 Z" fill="#c06219"/>
-        <path id="wave3" d="m 210,6 c 0,0 -17.245,6.529 -26.281,6.66 -10.209,0.148 -19.692,-6.354 -29.898,-6.66 -13.995,-0.42 -27.471,6.804 -41.472,6.66 -12.415,-0.127 -24.233,-6.592 -36.649,-6.66 C 62.493,5.928 49.85,12.732 36.644,12.66 24.229,12.593 0,6 0,6 V 20 H 210 Z" fill="#773d04"/>
-        <path d="m 0,8 c 0,0 17.245,6.529 26.281,6.66 10.209,0.148 19.692,-6.354 29.898,-6.66 13.995,-0.42 27.471,6.804 41.472,6.66 12.415,-0.127 24.233,-6.592 36.649,-6.66 13.206,-0.072 25.849,6.732 39.055,6.66 C 185.771,14.593 210,8 210,8 V 20 H 0 Z" fill="url(#bgBlend)"/>
-      </g>
-    </svg>
-  </div>
-</nav>
-<script>
-  // Toggle mobile menu visibility
-  document.addEventListener('click', function (e) {
-    if (!e.target.closest('nav')) {
-      document.querySelector('nav ul')?.classList.remove('show');
-    }
-  });
-</script>
-
-
-<!-- Hero Section -->
-<section id="hero" class="hero-bg py-20 text-white relative">
-  <div class="container mx-auto px-4 text-center relative" style="max-width: 800px; position: relative;">
-
-    <!-- Banner Image: Background Layer -->
-      <img src="live-on-whatnot-banner.png" alt="Live on Whatnot"
-          class="whatnot-banner" />
-    <!-- Whatnot Button -->
-    <a href="https://whatnot.com/invite/risingrockco"
-      class="whatnot-button px-6 py-3 rounded-full font-semibold transition"
-      style="background-color: #FFCC00; color: #000; display: inline-block; margin-top: 2rem;">
-      Join Live Shows on Whatnot
-    </a>
-
-
-    <p class="mt-4 text-sm">New to Whatnot? Get <strong>$15 credit</strong> when you sign up!</p>
-  </div>
-
-</section>
-
+    <div class="divider-container" style="margin: 0; padding: 0;">
+      <svg height="100%" preserveAspectRatio="none" viewBox="0 0 210 20" width="100%" xmlns="http://www.w3.org/2000/svg">
+        <g>
+          <path id="wave1" d="m 210,0 c 0,0 -17.245,6.529 -26.281,6.66 -10.209,0.148 -19.692,-6.354 -29.898,-6.66 -13.995,-0.42 -27.471,6.804 -41.472,6.66 -12.415,-0.127 -24.233,-6.592 -36.649,-6.66 C 62.493,-0.072 49.85,6.732 36.644,6.66 24.229,6.593 0,0 0,0 V 20 H 210 Z" fill="#a75913"/>
+          <path id="wave2" d="m 0,4 c 0,0 17.245,6.529 26.281,6.66 10.209,0.148 19.692,-6.354 29.898,-6.66 13.995,-0.42 27.471,6.804 41.472,6.66 12.415,-0.127 24.233,-6.592 36.649,-6.66 13.206,-0.072 25.849,6.732 39.055,6.66 C 185.771,10.593 210,4 210,4 V 20 H 0 Z" fill="#c06219"/>
+          <path id="wave3" d="m 210,6 c 0,0 -17.245,6.529 -26.281,6.66 -10.209,0.148 -19.692,-6.354 -29.898,-6.66 -13.995,-0.42 -27.471,6.804 -41.472,6.66 -12.415,-0.127 -24.233,-6.592 -36.649,-6.66 C 62.493,5.928 49.85,12.732 36.644,12.66 24.229,12.593 0,6 0,6 V 20 H 210 Z" fill="#773d04"/>
+          <path d="m 0,8 c 0,0 17.245,6.529 26.281,6.66 10.209,0.148 19.692,-6.354 29.898,-6.66 13.995,-0.42 27.471,6.804 41.472,6.66 12.415,-0.127 24.233,-6.592 36.649,-6.66 13.206,-0.072 25.849,6.732 39.055,6.66 C 185.771,14.593 210,8 210,8 V 20 H 0 Z" fill="url(#bgBlend)"/>
+        </g>
+      </svg>
+    </div>
+  </nav>
+  <script>
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('nav')) {
+        document.querySelector('nav ul')?.classList.remove('show');
+      }
+    });
+  </script>
+  <!-- Hero Section -->
+  <section id="hero" class="hero-bg py-20 text-white relative">
+    <div class="container mx-auto px-4 text-center relative" style="max-width: 800px; position: relative;">
+      <img src="live-on-whatnot-banner.png" alt="Live on Whatnot" class="whatnot-banner" />
+      <a href="https://whatnot.com/invite/risingrockco" class="whatnot-button px-6 py-3 rounded-full font-semibold transition" style="background-color: #FFCC00; color: #000; display: inline-block; margin-top: 2rem;">
+        Join Live Shows on Whatnot
+      </a>
+      <p class="mt-4 text-sm">New to Whatnot? Get <strong>$15 credit</strong> when you sign up!</p>
+    </div>
+  </section>
   <!-- About Us -->
   <section id="about" class="py-16 section-bg">
     <div class="container mx-auto px-4">
@@ -294,7 +365,6 @@
       <p class="text-lg">Our live shows are laid-back and honest, featuring low starting bids, fast shipping, and surprises like giveaways, grab bags, and rare finds you won’t see twice. Join us for good vibes and glowing gems!</p>
     </div>
   </section>
-
   <!-- What We Offer -->
   <section id="offerings" class="py-16 accent-orange">
     <div class="container mx-auto px-4">
@@ -328,160 +398,141 @@
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-bold text-center mb-8">Gallery</h2>
       <p class="text-lg text-center mb-8">Our glowing gems and hand-painted pieces are coming soon! Stay tuned for a vibrant showcase.</p>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
     </div>
   </section>
   <!-- Show Schedule -->
-<section id="schedule" class="py-16 accent-orange">
-  <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center mb-8">Show Schedule</h2>
-    <p class="text-lg text-center mb-4">Catch our live shows on Whatnot or find us at local flea markets for vibrant gems and exclusive art!</p>
-    <div class="text-center" style="background-color: #0C0602; padding: 2rem; border-radius: 1rem; box-shadow: 0 0 20px rgba(255, 204, 0, 0.3);">
-      <p class="mb-4" style="color: #F7F3EF;">🗓️ Live on Whatnot: Check our Whatnot page for upcoming shows!</p>
-      <p style="color: #F7F3EF;">📍 Flea Markets: Follow us on Instagram for local event updates.</p>
-      <div class="flex justify-between items-center text-[#FFCC00] mb-4">
-        <button id="prev-month" style="background-color: transparent; border: 1px solid #FFCC00; padding: 0.5rem 1rem; border-radius: 0.5rem;">◀</button>
-        <h3 id="month-name" class="text-2xl font-bold"></h3>
-        <button id="next-month" style="background-color: transparent; border: 1px solid #FFCC00; padding: 0.5rem 1rem; border-radius: 0.5rem;">▶</button>
+  <section id="schedule" class="py-16 accent-orange">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">Show Schedule</h2>
+      <p class="text-lg text-center mb-4">Catch our live shows on Whatnot or find us at local flea markets for vibrant gems and exclusive art!</p>
+      <div class="text-center" style="background-color: #0C0602; padding: 2rem; border-radius: 1rem; box-shadow: 0 0 20px rgba(255, 204, 0, 0.3);">
+        <p class="mb-4" style="color: #F7F3EF;">🗓️ Live on Whatnot: Check our Whatnot page for upcoming shows!</p>
+        <p style="color: #F7F3EF;">📍 Flea Markets: Follow us on Instagram for local event updates.</p>
+        <div class="flex justify-between items-center text-[#FFCC00] mb-4">
+          <button id="prev-month" style="background-color: transparent; border: 1px solid #FFCC00; padding: 0.5rem 1rem; border-radius: 0.5rem;">◀</button>
+          <h3 id="month-name" class="text-2xl font-bold"></h3>
+          <button id="next-month" style="background-color: transparent; border: 1px solid #FFCC00; padding: 0.5rem 1rem; border-radius: 0.5rem;">▶</button>
+        </div>
+        <div class="schedule-container">
+          <div id="calendar-grid" style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 0.5rem; margin-top: 1rem; color: #F7F3EF; font-family: 'Garamond', 'Georgia', serif;"></div>
+        </div>
+        <div id="calendar-popup" style="display:none; margin-top: 2rem; background-color: #1B110C; padding: 1rem; border-radius: 0.5rem; color: #F7F3EF; box-shadow: 0 0 10px rgba(255, 204, 0, 0.6);"></div>
       </div>
-      <div id="calendar-grid" style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 0.5rem; margin-top: 1rem; color: #F7F3EF; font-family: 'Garamond', 'Georgia', serif;"></div>
-      <div id="calendar-popup" style="display:none; margin-top: 2rem; background-color: #1B110C; padding: 1rem; border-radius: 0.5rem; color: #F7F3EF; box-shadow: 0 0 10px rgba(255, 204, 0, 0.6);"></div>
     </div>
-  </div>
-</section>
-
-<script>
-  const calendarId = '3d84526fd78876dccfeae2f03f919692e0bd144eb329551e9bd43e436c369628@group.calendar.google.com';
-  const apiKey = 'AIzaSyBADkrKxAAz3xU85R5RLEDKRIjbV30JAxE';
-
-  let currentDate = new Date();
-  let globalEvents = [];
-
-  function buildCalendarGrid(events, year, month) {
-    const calendarGrid = document.getElementById('calendar-grid');
-    calendarGrid.innerHTML = '';
-
-    document.getElementById('month-name').textContent = new Date(year, month).toLocaleString('en-US', { month: 'long', year: 'numeric' });
-
-    const firstDay = new Date(year, month, 1);
-    const lastDay = new Date(year, month + 1, 0);
-    const daysInMonth = lastDay.getDate();
-    const startDay = firstDay.getDay();
-
-    const days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-    days.forEach(day => {
-      const dayLabel = document.createElement('div');
-      dayLabel.textContent = day;
-      dayLabel.style.fontWeight = 'bold';
-      dayLabel.style.color = '#FFCC00';
-      calendarGrid.appendChild(dayLabel);
-    });
-
-    for (let i = 0; i < startDay; i++) {
-      calendarGrid.appendChild(document.createElement('div'));
-    }
-
-    for (let date = 1; date <= daysInMonth; date++) {
-      const dayBox = document.createElement('div');
-      const currentDateObj = new Date(year, month, date);
-      const matchingEvents = events.filter(e => {
-        const start = new Date(e.start.dateTime || e.start.date);
-        return start.toDateString() === currentDateObj.toDateString();
+  </section>
+  <script>
+    const calendarId = '3d84526fd78876dccfeae2f03f919692e0bd144eb329551e9bd43e436c369628@group.calendar.google.com';
+    const apiKey = 'AIzaSyBADkrKxAAz3xU85R5RLEDKRIjbV30JAxE';
+    let currentDate = new Date();
+    let globalEvents = [];
+    function buildCalendarGrid(events, year, month) {
+      const calendarGrid = document.getElementById('calendar-grid');
+      calendarGrid.innerHTML = '';
+      document.getElementById('month-name').textContent = new Date(year, month).toLocaleString('en-US', { month: 'long', year: 'numeric' });
+      const firstDay = new Date(year, month, 1);
+      const lastDay = new Date(year, month + 1, 0);
+      const daysInMonth = lastDay.getDate();
+      const startDay = firstDay.getDay();
+      const days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+      days.forEach(day => {
+        const dayLabel = document.createElement('div');
+        dayLabel.textContent = day;
+        dayLabel.style.fontWeight = 'bold';
+        dayLabel.style.color = '#FFCC00';
+        calendarGrid.appendChild(dayLabel);
       });
-
-      dayBox.textContent = date;
-      if (matchingEvents.length > 0) {
-        dayBox.innerHTML = `<strong>${date}</strong><br><span style='font-size: 0.75rem;'>${matchingEvents[0].summary}</span>`;
+      for (let i = 0; i < startDay; i++) {
+        calendarGrid.appendChild(document.createElement('div'));
       }
-          dayBox.style.padding = '1.5rem';
-          dayBox.style.minHeight = '120px';
-          dayBox.style.minWidth = '120px';
-          dayBox.style.borderRadius = '0.75rem';
-          dayBox.style.backgroundColor = matchingEvents.length > 0 ? '#A75913' : '#1B110C';
-          dayBox.style.boxShadow = matchingEvents.length > 0 ? '0 0 10px rgba(255, 204, 0, 0.6)' : 'none';
-          dayBox.style.textAlign = 'center';
-          dayBox.style.cursor = matchingEvents.length > 0 ? 'pointer' : 'default';
-          dayBox.style.display = 'flex';
-          dayBox.style.flexDirection = 'column';
-          dayBox.style.justifyContent = 'center';
-          dayBox.style.alignItems = 'center';
-
-
-      if (matchingEvents.length > 0) {
-        dayBox.addEventListener('click', () => {
-          const popup = document.getElementById('calendar-popup');
-          const event = matchingEvents[0];
-          const startDate = new Date(event.start.dateTime || event.start.date);
-          const formattedDate = startDate.toLocaleString('en-US', { dateStyle: 'full', timeStyle: 'short' });
-          popup.innerHTML = `
-            <h3 style="color: #FFCC00; font-size: 1.25rem;">${event.summary}</h3>
-            <p>${formattedDate}</p>
-            ${event.location ? `<p>📍 ${event.location}</p>` : ''}
-            ${event.description ? `<p>${event.description}</p>` : ''}
-          `;
-          popup.style.display = 'block';
-          popup.scrollIntoView({ behavior: 'smooth' });
+      for (let date = 1; date <= daysInMonth; date++) {
+        const dayBox = document.createElement('div');
+        const currentDateObj = new Date(year, month, date);
+        const matchingEvents = events.filter(e => {
+          const start = new Date(e.start.dateTime || e.start.date);
+          return start.toDateString() === currentDateObj.toDateString();
         });
+        dayBox.textContent = date;
+        if (matchingEvents.length > 0) {
+          dayBox.innerHTML = `<strong>${date}</strong><br><span style='font-size: 0.75rem;'>${matchingEvents[0].summary}</span>`;
+        }
+        dayBox.style.padding = '1.5rem';
+        dayBox.style.minHeight = '120px';
+        dayBox.style.minWidth = '120px';
+        dayBox.style.borderRadius = '0.75rem';
+        dayBox.style.backgroundColor = matchingEvents.length > 0 ? '#A75913' : '#1B110C';
+        dayBox.style.boxShadow = matchingEvents.length > 0 ? '0 0 10px rgba(255, 204, 0, 0.6)' : 'none';
+        dayBox.style.textAlign = 'center';
+        dayBox.style.cursor = matchingEvents.length > 0 ? 'pointer' : 'default';
+        dayBox.style.display = 'flex';
+        dayBox.style.flexDirection = 'column';
+        dayBox.style.justifyContent = 'center';
+        dayBox.style.alignItems = 'center';
+        if (matchingEvents.length > 0) {
+          dayBox.addEventListener('click', () => {
+            const popup = document.getElementById('calendar-popup');
+            const event = matchingEvents[0];
+            const startDate = new Date(event.start.dateTime || event.start.date);
+            const formattedDate = startDate.toLocaleString('en-US', { dateStyle: 'full', timeStyle: 'short' });
+            popup.innerHTML = `
+              <h3 style="color: #FFCC00; font-size: 1.25rem;">${event.summary}</h3>
+              <p>${formattedDate}</p>
+              ${event.location ? `<p>📍 ${event.location}</p>` : ''}
+              ${event.description ? `<p>${event.description}</p>` : ''}
+            `;
+            popup.style.display = 'block';
+            popup.scrollIntoView({ behavior: 'smooth' });
+          });
+        }
+        calendarGrid.appendChild(dayBox);
       }
-
-      calendarGrid.appendChild(dayBox);
     }
-  }
-
-  async function loadCalendarEvents(year, month) {
-    const timeMin = new Date(year, month, 1).toISOString();
-    const timeMax = new Date(year, month + 1, 0, 23, 59, 59).toISOString();
-    const url = `https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(calendarId)}/events?key=${apiKey}&timeMin=${timeMin}&timeMax=${timeMax}&singleEvents=true&orderBy=startTime&maxResults=100`;
-
-    try {
-      const response = await fetch(url);
-      const data = await response.json();
-      globalEvents = data.items || [];
-      buildCalendarGrid(globalEvents, year, month);
-    } catch (error) {
-      console.error('Failed to load calendar events:', error);
-      document.getElementById('calendar-popup').innerHTML = '<p style="color: red;">Error loading events.</p>';
+    async function loadCalendarEvents(year, month) {
+      const timeMin = new Date(year, month, 1).toISOString();
+      const timeMax = new Date(year, month + 1, 0, 23, 59, 59).toISOString();
+      const url = `https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(calendarId)}/events?key=${apiKey}&timeMin=${timeMin}&timeMax=${timeMax}&singleEvents=true&orderBy=startTime&maxResults=100`;
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
+        globalEvents = data.items || [];
+        buildCalendarGrid(globalEvents, year, month);
+      } catch (error) {
+        console.error('Failed to load calendar events:', error);
+        document.getElementById('calendar-popup').innerHTML = '<p style="color: red;">Error loading events.</p>';
+      }
     }
-  }
-
-  document.getElementById('prev-month').addEventListener('click', () => {
-    currentDate.setMonth(currentDate.getMonth() - 1);
+    document.getElementById('prev-month').addEventListener('click', () => {
+      currentDate.setMonth(currentDate.getMonth() - 1);
+      loadCalendarEvents(currentDate.getFullYear(), currentDate.getMonth());
+    });
+    document.getElementById('next-month').addEventListener('click', () => {
+      currentDate.setMonth(currentDate.getMonth() + 1);
+      loadCalendarEvents(currentDate.getFullYear(), currentDate.getMonth());
+    });
     loadCalendarEvents(currentDate.getFullYear(), currentDate.getMonth());
-  });
-
-  document.getElementById('next-month').addEventListener('click', () => {
-    currentDate.setMonth(currentDate.getMonth() + 1);
-    loadCalendarEvents(currentDate.getFullYear(), currentDate.getMonth());
-  });
-
-  loadCalendarEvents(currentDate.getFullYear(), currentDate.getMonth());
-</script>
+  </script>
   <!-- Request/feedback -->
   <section id="request" class="py-16 accent-brown">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-bold text-center mb-8">Requests & Feedback</h2>
-  <iframe data-tally-src="https://tally.so/embed/w8YAbY?alignLeft=1&dynamicHeight=1" loading="lazy" width="100%" height="1211" frameborder="0" marginheight="0" marginwidth="0" title="Rising Rock Co. Feedback & Requests"></iframe>
-  <script>
-    var d=document,w="https://tally.so/widgets/embed.js",v=function(){
-      "undefined"!=typeof Tally?Tally.loadEmbeds():
-      d.querySelectorAll("iframe[data-tally-src]:not([src])")
-      .forEach(function(e){e.src=e.dataset.tallySrc});
-    };
-    if("undefined"!=typeof Tally)v();
-    else if(d.querySelector('script[src="'+w+'"]')==null){
-      var s=d.createElement("script");
-      s.src=w;
-      s.onload=v;
-      s.onerror=v;
-      d.body.appendChild(s);
-    }
-  </script>
-      </div>
+      <iframe data-tally-src="https://tally.so/embed/w8YAbY?alignLeft=1&dynamicHeight=1" loading="lazy" width="100%" height="1211" frameborder="0" marginheight="0" marginwidth="0" title="Rising Rock Co. Feedback & Requests"></iframe>
+      <script>
+        var d=document,w="https://tally.so/widgets/embed.js",v=function(){
+          "undefined"!=typeof Tally?Tally.loadEmbeds():
+          d.querySelectorAll("iframe[data-tally-src]:not([src])")
+          .forEach(function(e){e.src=e.dataset.tallySrc});
+        };
+        if("undefined"!=typeof Tally)v();
+        else if(d.querySelector('script[src="'+w+'"]')==null){
+          var s=d.createElement("script");
+          s.src=w;
+          s.onload=v;
+          s.onerror=v;
+          d.body.appendChild(s);
+        }
+      </script>
     </div>
   </section>
-
   <!-- Contact Us -->
   <section id="contact" class="py-16 accent-orange">
     <div class="container mx-auto px-4">
@@ -489,29 +540,22 @@
       <div class="text-center">
         <p class="mb-2">📧 Email: <a href="mailto:support@risingrock.co" class="text-[#F5F5DC] hover:underline">support@risingrock.co</a></p>
         <p class="mb-2" style="display: flex; align-items: center; justify-content: center;">
-          <img src="Symbol_V1.png" alt="Whatnot Icon"
-              style="width: 1em; height: 1em; margin-right: 0.35em;">
-         Whatnot: <a href="https://www.whatnot.com/user/risingrockco" class="text-[#F5F5DC] hover:underline">@risingrockco</a>
+          <img src="Symbol_V1.png" alt="Whatnot Icon" style="width: 1em; height: 1em; margin-right: 0.35em;">
+          Whatnot: <a href="https://www.whatnot.com/user/risingrockco" class="text-[#F5F5DC] hover:underline">@risingrockco</a>
         </p>
         <p class="mb-2" style="display: flex; align-items: center; justify-content: center;">
-          <img src="Instagram_Glyph_Gradient.png" alt="Instagram Icon"
-              style="width: 1em; height: 1em; margin-right: 0.35em;">
-         Instagram: <a href="https://instagram.com/risingrockco" class="text-[#F5F5DC] hover:underline">@risingrockco</a>
+          <img src="Instagram_Glyph_Gradient.png" alt="Instagram Icon" style="width: 1em; height: 1em; margin-right: 0.35em;">
+          Instagram: <a href="https://instagram.com/risingrockco" class="text-[#F5F5DC] hover:underline">@risingrockco</a>
         </p>
-        <!-- Placeholder for Formly Form - replace with your embed code -->
-
       </div>
     </div>
   </section>
-
   <!-- Footer -->
   <footer style="background: linear-gradient(to right, #8B4513, #5C4033);" class="text-[#F5F5DC] py-6 shadow-[0_-4px_20px_rgba(0,0,0,0.3)]">
     <div class="container mx-auto px-4 text-center">
       <p>© 2025 Rising Rock Co. • Where crystals rise and stories flow</p>
     </div>
   </footer>
-
-  <!-- JavaScript for Smooth Scrolling and Custom Cursor -->
   <script>
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
@@ -521,8 +565,6 @@
         });
       });
     });
-    // Placeholder for custom cursor JavaScript - replace with your code
-    // Example: document.body.style.cursor = 'url(your-cursor-image.png), auto';
   </script>
   <svg style="display:none">
     <defs>
@@ -532,6 +574,5 @@
       </radialGradient>
     </defs>
   </svg>
-
 </body>
 </html>
