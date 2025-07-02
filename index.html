@@ -8,16 +8,27 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap">
   <link rel="icon" href="https://via.placeholder.com/32x32?text=RRC" type="image/x-icon">
   <style>
-    .whatnot-banner {
-      width: 100%;
-      max-width: 760px;
-      border-radius: 1.5rem;
-      display: block;
-      margin: 0 auto;
-      box-shadow: 0 0 20px rgba(255, 204, 0, 0.4); /* yellow glow */
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+    @media (max-width: 640px) {
+      nav .container {
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+        flex-direction: row !important;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.5rem;
+      }
 
+      nav img {
+        height: 4rem !important;
+        margin-top: 0 !important;
+      }
+
+      nav ul {
+        flex: 1 1 100%;
+        justify-content: center !important;
+        gap: 0.25rem;
+      }
+    }
     .whatnot-banner:hover {
       transform: scale(1.02);
       box-shadow: 0 0 40px rgba(255, 204, 0, 0.6); /* brighter glow */
@@ -148,9 +159,14 @@
 <body class="text-white smooth-scroll">
 
   <!-- Navigation -->
-  <nav style="background-color: #000000;" class="text-[#F5F5DC] py-1 sticky top-0 z-10 shadow-[0_4px_15px_rgba(0,0,0,0.3)]">
+  <nav style="background-color: #000000;"
+     class="text-[#F5F5DC] py-1 sm:py-2 sticky top-0 z-10 shadow-[0_4px_15px_rgba(0,0,0,0.3)] min-h-fit">
+
     <div class="container mx-auto px-2 flex flex-col sm:flex-row justify-between items-center space-y-1 sm:space-y-0">
-      <img alt="Rising Rock Co. Animated Logo" src="ezgif.com-crop.gif" class="h-36 sm:h-52 -mt-12 z-0 relative" />
+      <img alt="Rising Rock Co. Animated Logo"
+          src="ezgif.com-crop.gif"
+          class="h-24 sm:h-36 -mt-6 sm:-mt-12 z-0 relative" />
+
       <ul class="flex flex-wrap justify-center sm:justify-end space-x-2 sm:space-x-6 text-sm sm:text-base">
         <li><a href="#about" class="hover:text-[#D2691E] transition-all duration-300">About</a></li>
         <li><a href="#offerings" class="hover:text-[#D2691E] transition-all duration-300">Offerings</a></li>
